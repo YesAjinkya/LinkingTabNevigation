@@ -1,0 +1,518 @@
+.tab1{
+  height: 50px;
+  width: 250px;
+  margin: 10px;
+  border: transparent;
+  border-radius: 10px;
+}
+
+.activeBlue{
+  height: 50px;
+  width: 250px;
+  margin: 10px;
+  border: transparent;
+  border-radius: 10px;
+  background-color: blue;
+  color: #fff;
+}
+.diactivatedTab{
+    display: none;
+}
+.activeTab{
+    display: block;
+}
+
+/* **********observation table css *********** */
+.obser_table {
+    border-collapse: separate;
+    border-spacing: 0px 6px;
+  }
+  
+  .obser_table thead th {
+    color: #646464;
+    font-weight: 500;
+  }
+  
+  .obser_table tbody tr {
+    box-shadow: 2px 3px 7px 1px #e3e3e3;
+    border-radius: 7px;
+    line-height: 32px;
+  }
+  
+  .obser_table tbody tr .obshead {
+    cursor: pointer;
+    color: #10005d;
+    font-weight: 700;
+  }
+  
+  .obser_table tbody tr td .red-bg {
+    background-color: #ffdbd9;
+    padding: 7px 11px;
+    color: red;
+    font-weight: 600;
+    border-radius: 30px;
+  }
+  
+  /* **********observation table css End*********** */
+  
+  #updateObservModal .modal-header {
+    border-bottom: none;
+  }
+  .modal.drawer {
+    /* display: flex !important; */
+    pointer-events: none;
+  }
+  .modal .drawer * {
+    pointer-events: none;
+  }
+  .modal.drawer .modal-dialog {
+    margin: 0px;
+    display: flex;
+    flex: auto;
+    transform: translate(25%, 0);
+    width: 100%;
+    height: 100%;
+    background: #fbfef7;
+    /* transition: transform 1s ease-out !important; */
+  }
+  .modal.drawer .modal-dialog .modal-content {
+    border: none;
+    border-radius: 0px;
+    background: #fbfef7;
+  }
+  .modal.drawer .modal-dialog .modal-content .modal-body {
+    overflow: auto;
+  }
+  .modal.drawer.show {
+    pointer-events: auto;
+  }
+  .modal.drawer.show * {
+    pointer-events: auto;
+  }
+  /* .modal.drawer.show .modal-dialog { */
+  /* transform: translate(0, 0);
+       */
+  /* transform: translate(-337px, 0);
+  } */
+  .modal.drawer.right-align {
+    flex-direction: row-reverse;
+  }
+  .modal.drawer.left-align:not(.show) .modal-dialog {
+    transform: translate(-25%, 0);
+  }
+  .select-box {
+    border-radius: 20px !important;
+  }
+  .modal-lable {
+    font-size: 10px;
+    font-weight: 650;
+  }
+  
+  .modal-body::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  .modal-body::-webkit-scrollbar-button {
+    height: 12px;
+  }
+  .modal-body {
+    scrollbar-width: thin !important;
+    scrollbar-color: #cfd8dc #101010 !important;
+  }
+  .modal-body::-webkit-scrollbar-track {
+    background: #90a4ae !important;
+    border: 4px solid transparent;
+    border-radius: 2px;
+    background-clip: content-box;
+  }
+  .modal-body::-webkit-scrollbar-thumb {
+    background: #101010 !important;
+    border-radius: 6px;
+    border: 1px solid rgb(0, 0, 0);
+    height: 10px;
+  }
+  
+  /* .modal-content {
+    background-color: #f0f7da;
+  } */
+  .btn-cancel {
+    border-radius: 20px;
+    padding: 5px 30px;
+    background: #f9fff9 !important;
+    border: 1px solid gray;
+    font-weight: 625;
+  }
+  
+  .btn-submit {
+    border-radius: 20px;
+    padding: 5px 30px;
+    background: #101010 !important;
+    color: white !important;
+    font-weight: 625;
+  }
+  
+  .modal {
+    position: fixed;
+    top: 0%;
+    left: 50%;
+    z-index: 1060;
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    outline: 0;
+  }
+  
+  .modal-content {
+    background: #f9fff9 !important;
+    color: gray;
+  }
+  
+  .form-select {
+    outline: 0 !important;
+    box-shadow: none !important;
+    cursor: pointer !important;
+    background-color: #f9fff9 !important;
+  }
+  
+  .form-control {
+    box-shadow: none !important;
+    background-color: #f9fff9 !important;
+  }
+  
+  .ml-100 {
+    margin-left: 100px;
+  }
+  
+  .file-upload-container {
+    display: block;
+    width: 80%;
+    border: 1px solid #ced4da;
+    background-color: #f9fff9;
+    margin-left: 13px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    border-radius: 0.25rem;
+  }
+  .input-group-text {
+    float: right;
+    margin-left: 10px;
+    padding: 0.25rem 0.79rem !important;
+    cursor: pointer;
+  }
+  
+  .modal-title {
+    color: #101010;
+  }
+  
+  .upload-button {
+    width: 7.5%;
+    height: 35px;
+    padding: 0 0px 2.5px 1.5px;
+    margin-left: 17px;
+    border: none;
+    margin-top: 4px;
+    background: #101010;
+    border-radius: 0.25rem;
+  }
+  .file-name {
+    display: block;
+    height: 20px;
+    text-overflow: hidden;
+    width: 70% !important;
+  }
+  .IA-title {
+    color: #fff;
+  
+    font-size: 13px;
+  
+    font-weight: 600;
+    text-align: center;
+  
+    display: block;
+  }
+  
+  /* tags code */
+  
+  .container-1 {
+    width: 100%;
+  }
+  input[type="file"] {
+      display: none;
+  }
+  
+  /*******Pagination CSS***********/
+  
+  .obs_pagination .pagination {
+    justify-content: center;
+  }
+  .pagination ::ng-deep .ngx-pagination .current {
+    background: #10005d;
+    text-decoration: none;
+  }
+  .pagination ::ng-deep .ngx-pagination .next {
+    text-decoration: none;
+  }
+  .current {
+    background: #10005d;
+  }
+  
+  .selection-div {
+    /* margin-top: 30px; */
+    text-align: right;
+    margin-right: 10px;
+  }
+  
+  .selection {
+    border: 1px solid #ccc;
+    color: #646464;
+    border-radius: 5px;
+    outline: none !important;
+  }
+  
+  .pagination-row {
+    margin-top: 20px;
+  }
+  
+  #updateObservModal .modal-header {
+    border-bottom: none;
+  }
+  .modal.drawer {
+    /* display: flex !important; */
+    pointer-events: none;
+  }
+  .modal .drawer * {
+    pointer-events: none;
+  }
+  .modal.drawer .modal-dialog {
+    margin: 0px;
+    display: flex;
+    flex: auto;
+    /* transform: translate(25%, 0); */
+    transform: translate(102%, 0);
+    width: 100%;
+    height: 100%;
+    background: #fbfef7;
+    /* transition: transform 1s ease-out !important; */
+  }
+  .modal.drawer .modal-dialog .modal-content {
+    border: none;
+    border-radius: 0px;
+    background: #fbfef7;
+  }
+  .modal.drawer .modal-dialog .modal-content .modal-body {
+    overflow: auto;
+  }
+  .modal.drawer.show {
+    pointer-events: auto;
+  }
+  .modal.drawer.show * {
+    pointer-events: auto;
+  }
+  .modal.drawer.show .modal-dialog {
+    /* transform: translate(0, 0);
+       */
+    /* transform: translate(-337px, 0); */
+  }
+  .modal.drawer.right-align {
+    flex-direction: row-reverse;
+  }
+  .modal.drawer.left-align:not(.show) .modal-dialog {
+    transform: translate(-25%, 0);
+  }
+  .select-box {
+    border-radius: 20px !important;
+  }
+  .modal-lable {
+    font-size: 10px;
+    font-weight: 650;
+  }
+  
+  .modal-body::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  .modal-body::-webkit-scrollbar-button {
+    height: 12px;
+  }
+  .modal-body {
+    scrollbar-width: thin !important;
+    scrollbar-color: #cfd8dc #101010 !important;
+  }
+  .modal-body::-webkit-scrollbar-track {
+    background: #90a4ae !important;
+    border: 4px solid transparent;
+    border-radius: 2px;
+    background-clip: content-box;
+  }
+  .modal-body::-webkit-scrollbar-thumb {
+    background: #101010 !important;
+    border-radius: 6px;
+    border: 1px solid rgb(0, 0, 0);
+    height: 10px;
+  }
+  
+  /* .modal-content {
+    background-color: #f0f7da;
+  } */
+  .btn-cancel {
+    border-radius: 20px;
+    padding: 5px 30px;
+    background: #f9fff9 !important;
+    border: 1px solid gray;
+    font-weight: 625;
+  }
+  
+  .btn-submit {
+    border-radius: 20px;
+    padding: 5px 30px;
+    background: #101010 !important;
+    color: white !important;
+    font-weight: 625;
+  }
+  
+  .modal {
+    position: fixed;
+    top: 0%;
+    left: 21%;
+    z-index: 1060;
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    outline: 0;
+  }
+  
+  .modal-content {
+    background: #f9fff9 !important;
+    color: gray;
+  }
+  
+  .form-select {
+    outline: 0 !important;
+    box-shadow: none !important;
+    cursor: pointer !important;
+    background-color: #f9fff9 !important;
+  }
+  
+  .form-control {
+    box-shadow: none !important;
+    background-color: #f9fff9 !important;
+  }
+  
+  .ml-100 {
+    margin-left: 100px;
+  }
+  
+  .file-upload-container {
+    display: block;
+    width: 80%;
+    border: 1px solid #ced4da;
+    background-color: #f9fff9;
+    margin-left: 13px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    border-radius: 0.25rem;
+  }
+  .input-group-text {
+    float: right;
+    margin-left: 10px;
+    padding: 0.25rem 0.79rem !important;
+    cursor: pointer;
+  }
+  
+  .modal-title {
+    color: #101010;
+  }
+  
+  .upload-button {
+    width: 7.5%;
+    height: 35px;
+    padding: 0 0px 2.5px 1.5px;
+    margin-left: 17px;
+    border: none;
+    margin-top: 4px;
+    background: #101010;
+    border-radius: 0.25rem;
+  }
+  .file-name {
+    display: block;
+    height: 20px;
+    text-overflow: hidden;
+    width: 70% !important;
+  }
+  .IA-title {
+    color: #fff;
+  
+    font-size: 13px;
+  
+    font-weight: 600;
+    text-align: center;
+  
+    display: block;
+  }
+  .validationMessage {
+    font-size: 12px;
+    color: #ff0000;
+  }
+  .selectedPrimaryOwner {
+    padding: 2px;
+    width: 350px;
+    background-color: #fff;
+    border-radius: 30px;
+  }
+  .ownerImg {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  .ownerEmail {
+    padding: 5px;
+  }
+  .deleteOwner {
+    width: 30px;
+    height: 30px;
+    padding: 3px;
+    font-size: 14px;
+    border-radius: 50%;
+    border-color: transparent;
+  }
+  .deleteOwner:hover {
+    background-color: #10005d;
+    color: #fff;
+  }
+  .populatedUserlist {
+    background-color: #fff;
+    height: 100px;
+    overflow-y: auto;
+  }
+  .tag-container,
+  .tag-container-1 {
+    position: relative;
+  }
+  .populatedUserlist {
+    position: absolute;
+    top: 37px;
+    height: 15vh;
+    border: 1px solid #ccc;
+    width: 100%;
+    list-style-type: none;
+    font-size: 14px;
+    overflow-y: auto !important;
+    border-radius: 5px;
+  }
+  
+  .p-r {
+    position: relative;
+  }
+  
+  .date1 {
+    position: absolute;
+    top: 23px;
+    right: 13px;
+  }
+  .modal_custom{
+    margin-left: 12%;;
+  }

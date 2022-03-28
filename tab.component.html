@@ -1,0 +1,188 @@
+<p style="text-align: center;">|| Shree ||</p>
+
+
+<button type="button" [ngClass]="{ 'activeBlue' : statusforobservation == 0 ,'tab1' : statusforobservation != 0}" (click)="nevigation(0)">All</button>
+<button type="button" [ngClass]="{ 'activeBlue' : statusforobservation == 1 ,'tab1' : statusforobservation != 1}" (click)="nevigation(1)">Review Pending</button>
+<button type="button" [ngClass]="{ 'activeBlue' : statusforobservation == 2 ,'tab1' : statusforobservation != 2}" (click)="nevigation(2)">Open</button>
+<button type="button" [ngClass]="{ 'activeBlue' : statusforobservation == 3 ,'tab1' : statusforobservation != 3}" (click)="nevigation(3)">Closed</button>
+<!-- (click)="nevigation()" -->
+
+<div id="datatableforObservation" [ngClass]="{ 'activeTab' : statusforobservation == 0 ,'diactivatedTab' : statusforobservation != 0}">
+    <table class="table table-responsive table-borderless obser_table">
+        <thead>
+            <tr>
+                <th>Report Name</th>
+                <th>Observation</th>
+                <th>Primary Process Owner</th>
+                <th>Target Date</th>
+                <th>Risk Rating</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <ng-container *ngFor="let data of observationData">
+                <tr>
+                    <td>{{ data.reportName }}</td>
+
+                    <!-- <td
+          class="obshead"
+          data-bs-toggle="modal"
+          [attr.data-bs-target]="'#id1'"
+          (click)="setId(data)"
+        >
+          {{ data. observationHeading }}
+        </td> -->
+                    <td class="obshead">
+                        {{ data.observationHeading }}
+                    </td>
+                    <td>{{ data.primaryProcessOwner }}</td>
+
+                    <td>{{ data.targetDate| date }}</td>
+
+                    <td>{{ data.riskRatingName}}</td>
+
+                    <td>
+                        <span class="bal-span red-bg">{{ data.status}}</span>
+                    </td>
+                </tr>
+            </ng-container>
+        </tbody>
+    </table>
+
+</div>
+
+<div id="datatableforObservation" [ngClass]="{ 'activeTab' : statusforobservation == 1 ,'diactivatedTab' : statusforobservation != 1}">
+    <table class="table table-responsive table-borderless obser_table">
+        <thead>
+            <tr>
+                <th>Report Name</th>
+                <th>Observation</th>
+                <th>Primary Process Owner</th>
+                <th>Target Date</th>
+                <th>Risk Rating</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <ng-container *ngFor="let data of observationData">
+                <tr>
+                    <td>{{ data.reportName }}</td>
+
+                    <!-- <td
+          class="obshead"
+          data-bs-toggle="modal"
+          [attr.data-bs-target]="'#id1'"
+          (click)="setId(data)"
+        >
+          {{ data. observationHeading }}
+        </td> -->
+                    <td class="obshead">
+                        {{ data.observationHeading }}
+                    </td>
+                    <td>{{ data.primaryProcessOwner }}</td>
+
+                    <td>{{ data.targetDate| date }}</td>
+
+                    <td>{{ data.riskRatingName}}</td>
+
+                    <td>
+                        <span class="bal-span red-bg">{{ data.status}}</span>
+                    </td>
+                </tr>
+            </ng-container>
+        </tbody>
+    </table>
+
+</div>
+
+<div id="datatableforObservation" [ngClass]="{ 'activeTab' : statusforobservation == 2 ,'diactivatedTab' : statusforobservation != 2}">
+    <table class="table table-responsive table-borderless obser_table">
+        <thead>
+            <tr>
+                <th>Report Name</th>
+                <th>Observation</th>
+                <th>Primary Process Owner</th>
+                <th>Target Date</th>
+                <th>Risk Rating</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <ng-container *ngFor="let data of observationData">
+                <tr>
+                    <td>{{ data.reportName }}</td>
+
+                    <!-- <td
+          class="obshead"
+          data-bs-toggle="modal"
+          [attr.data-bs-target]="'#id1'"
+          (click)="setId(data)"
+        >
+          {{ data. observationHeading }}
+        </td> -->
+                    <td class="obshead">
+                        {{ data.observationHeading }}
+                    </td>
+                    <td>{{ data.primaryProcessOwner }}</td>
+
+                    <td>{{ data.targetDate| date }}</td>
+
+                    <td>{{ data.riskRatingName}}</td>
+
+                    <td>
+                        <span class="bal-span red-bg">{{ data.status}}</span>
+                    </td>
+                </tr>
+            </ng-container>
+        </tbody>
+    </table>
+
+</div>
+
+<div id="datatableforObservation" [ngClass]="{ 'activeTab' : statusforobservation == 3 ,'diactivatedTab' : statusforobservation != 3}">
+    <table class="table table-responsive table-borderless obser_table">
+        <thead>
+            <tr>
+                <th>Report Name</th>
+                <th>Observation</th>
+                <th>Primary Process Owner</th>
+                <th>Target Date</th>
+                <th>Risk Rating</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <ng-container *ngFor="let data of observationData">
+                <tr>
+                    <td>{{ data.reportName }}</td>
+
+                    <!-- <td
+          class="obshead"
+          data-bs-toggle="modal"
+          [attr.data-bs-target]="'#id1'"
+          (click)="setId(data)"
+        >
+          {{ data. observationHeading }}
+        </td> -->
+                    <td class="obshead">
+                        {{ data.observationHeading }}
+                    </td>
+                    <td>{{ data.primaryProcessOwner }}</td>
+
+                    <td>{{ data.targetDate| date }}</td>
+
+                    <td>{{ data.riskRatingName}}</td>
+
+                    <td>
+                        <span class="bal-span red-bg">{{ data.status}}</span>
+                    </td>
+                </tr>
+            </ng-container>
+        </tbody>
+    </table>
+
+</div>
